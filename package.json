@@ -1,0 +1,22 @@
+{
+  "name": "worldlapse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "cd client && npm run build && cd ../server && rm -r client/build && mv ../client/build client && git add . && git commit -m \"Deploy\" && git push heroku master",
+    "install_modules": "cd client && npm i && cd ../server && npm i && cd ..",
+    "build_static": "cd client && npm run build && cd ../server && rm -r client/build && mv ../client/build client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saschamz/worldlapse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saschamz/worldlapse/issues"
+  },
+  "homepage": "https://github.com/Saschamz/worldlapse#readme"
+}
