@@ -1,0 +1,58 @@
+
+:root {
+  --border: 1px solid #222;
+}
+
+.feed {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 123123;
+  animation: .6s slideUp forwards 1;
+}
+
+.feed, .feed > * {
+  width: 40vw;
+  max-width: 700px;
+}
+
+.feed h1 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: "Roboto Slab";
+  color: #222;
+  margin: 0;
+  border: var(--border);
+  margin-bottom: 5px;
+  background: whitesmoke;
+  padding: 6px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 2vh;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.feed iframe {
+  border: none;
+  height: 400px;
+  max-height: 30vh;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  border: var(--border);
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  
+  100% {
+    transform: translateY(0%);
+  }
+}

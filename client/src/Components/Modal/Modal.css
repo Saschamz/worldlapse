@@ -1,0 +1,71 @@
+
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  background: hsla(0, 0%, 0%, 0.5);
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1726387126783168723;
+}
+
+.modal {
+  background: whitesmoke;
+  min-width: 600px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal h1, .row, .modal button {
+  font-family: "Roboto Slab";
+}
+
+.modal h1 {
+  text-align: center;
+  margin: 0;
+  margin-top: 20px;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: -6px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+}
+
+i {
+  padding: 0 15px;
+}
+
+.rows {
+  padding: 30px 0;
+}
+
+.modal button {
+  width: 100%;
+  font-size: 2rem;
+  background: #222;
+  color: white;
+  border: 0;
+  padding: 15px;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+
+.modal button:hover {
+  background: #444;
+}
+
+.modal button:active {
+  outline: none;
+}

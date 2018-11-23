@@ -1,0 +1,13 @@
+
+.map {
+  height: 100vh;
+  width: 100vw;
+}
+
+.map-container {
+  transition: 400ms;
+}
+
+.overlay {
+  filter: blur(3px) grayscale(0.3);
+}

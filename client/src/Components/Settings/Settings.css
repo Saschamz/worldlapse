@@ -1,0 +1,204 @@
+
+.toggle {
+  margin: 40px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  cursor: pointer;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 123123;
+}
+
+.btn-info {
+  display: grid;
+  align-items: end;
+}
+
+.btn-info i {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #222;
+  transition: 150ms;
+}
+
+.btn-info i:hover {
+  color: #444;
+}
+
+.onoffswitch {
+  position: relative; width: 90px;
+  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  display: block; overflow: hidden; cursor: pointer;
+  height: 30px; padding: 0; line-height: 30px;
+  border: 2px solid #999999; border-radius: 30px;
+  background-color: #EEEEEE;
+  transition: background-color 0.3s ease-in;
+}
+
+.onoffswitch-label:before {
+  content: "";
+  display: block; width: 30px; margin: 0px;
+  background: #FFFFFF;
+  position: absolute; top: 0; bottom: 0;
+  right: 60px;
+  border: 2px solid #999999; border-radius: 30px;
+  transition: all 0.3s ease-in 0s; 
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+  background-color: #57F2AF;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+ border-color: #57F2AF;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+  right: 0px; 
+}
+
+.onoffswitch-checkbox:checked +.onoffswitch-label:before {
+  border: 1px solid #999;
+}
+
+input[type=range].range-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 7.3px 0;
+}
+
+input[type=range].range-slider:focus {
+  outline: none;
+}
+
+input[type=range].range-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 11.4px;
+  cursor: pointer;
+  
+  background: #57F2AF;
+  border-radius: 5px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range].range-slider::-webkit-slider-thumb {
+  
+  border: 1px solid #999;
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7.5px;
+}
+
+input[type=range].range-slider:focus::-webkit-slider-runnable-track {
+  background: #57F2AF;
+}
+
+input[type=range].range-slider::-moz-range-track {
+  width: 100%;
+  height: 11.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: rgba(0, 187, 160, 0.68);
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range].range-slider::-moz-range-thumb {
+  box-shadow: 0.9px 0.9px 1px #000031, 0px 0px 0.9px #00004b;
+  border: 1.8px solid rgba(0, 0, 30, 0);
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range].range-slider::-ms-track {
+  width: 100%;
+  height: 11.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range].range-slider::-ms-fill-lower {
+  background: rgba(0, 162, 138, 0.68);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range].range-slider::-ms-fill-upper {
+  background: rgba(0, 187, 160, 0.68);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range].range-slider::-ms-thumb {
+  box-shadow: 0.9px 0.9px 1px #000031, 0px 0px 0.9px #00004b;
+  border: 1.8px solid rgba(0, 0, 30, 0);
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 11.4px;
+}
+
+input[type=range].range-slider:focus::-ms-fill-lower {
+  background: rgba(0, 187, 160, 0.68);
+}
+
+input[type=range].range-slider:focus::-ms-fill-upper {
+  background: rgba(0, 212, 182, 0.68);
+}
+
+.range-slider {
+  background-color: transparent;
+}
+
+.range-container {
+  opacity: 0;
+  animation: 300ms range forwards 1 150ms;
+  text-align: center;
+  width: 150%;
+  position: relative;
+}
+
+.range-container label, .label {
+  font-family: "Roboto Slab";
+}
+
+.range-container label {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -100%);
+  width: 100%;
+  text-align: left;
+}
+
+@keyframes range {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
