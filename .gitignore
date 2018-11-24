@@ -1,3 +1,2 @@
-/server/node_modules
-/client/node_modules
-/client/src/keys.js
+/src/keys.js
+/node_modules

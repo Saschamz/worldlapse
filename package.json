@@ -1,22 +1,28 @@
 {
-  "name": "worldlapse",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "mapbox-gl": "^0.50.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-mapbox-gl": "^4.0.0",
+    "react-scripts": "2.1.1"
+  },
   "scripts": {
-    "deploy": "cd client && npm run build && cd ../server && rm -r client/build && mv ../client/build client && git add . && git commit -m \"Deploy\" && git push heroku master",
-    "install_modules": "cd client && npm i && cd ../server && npm i && cd ..",
-    "build_static": "cd client && npm run build && cd ../server && rm -r client/build && mv ../client/build client"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Saschamz/worldlapse.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Saschamz/worldlapse/issues"
-  },
-  "homepage": "https://github.com/Saschamz/worldlapse#readme"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
